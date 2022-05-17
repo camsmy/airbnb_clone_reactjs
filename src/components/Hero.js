@@ -1,11 +1,10 @@
 import React from "react"
-import Heroimage from "../images/hero_img.png"
 function HeroImg(){
     return(
         <main>
             <div className="container">
                 <div className="flex justify-content-center">
-                    <img src={Heroimage} alt="Main" className="hero--img"/>
+                    <img src="../images/hero_img.png" alt="Main" className="hero--img"/>
                 </div>
                 <Herocontent/>
             </div>

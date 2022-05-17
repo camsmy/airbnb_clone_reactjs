@@ -1,45 +1,27 @@
 import React from "react"
-import pictures from "../images/katie.png"
-import star from "../images/star1.png"
-export default function Card(){
+export default function Card(props){
     return(
-        <section>
-            <div className="container flex">
+            <>
                 <div className="card">
                     <div className="card--image-container">
-                        <img src={pictures} alt="teachers" className="card--image"/>
+                    <img src={`./images/${props.img}`} alt="teachers" className="card--image"/> 
                         <div className="card--image-tag">SOLD OUT</div>
                     </div>
                     <div className="flex card--content">
-                    <img src={star} alt="star icon" className="card--star"/>
-                    <p className="card--rating"><span className="card--rate">5.0</span>(6) • USA</p>
+                    <img src="../images/star1.png" alt="star icon" className="card--star"/>
+                    <p className="card--rating"><span className="card--rate">{props.rating}</span>({props.reviewCount}) • {props.location}</p>
                     </div>
                     <div className="card--content">
-                    <p className="card--text">Life lessons with Katie Zaferes</p>
+                    <p className="card--text">{props.title}</p>
                     </div>
                     <div className="flex card--content">
-                    <p className="card--text"><span className="card--bold">From $136</span> / person</p>
+                    <p className="card--text"><span className="card--bold">From {props.title}</span> / person</p>
                     </div>
-                </div>
 
-                <div className="card">
-                    <div className="card--image-container">
-                        <img src={pictures} alt="teachers" className="card--image"/>
-                        <div className="card--image-tag">ONLINE</div>
-                    </div>
-                    <div className="flex card--content">
-                    <img src={star} alt="star icon" className="card--star"/>
-                    <p className="card--rating"><span className="card--rate">5.0</span>(30) • USA</p>
-                    </div>
-                    <div className="card--content">
-                    <p className="card--text">Learn wedding photography</p>
-                    </div>
-                    <div className="flex card--content">
-                    <p className="card--text"><span className="card--bold">From $125</span> / person</p>
-                    </div>
                 </div>
-            </div>
-        
-        </section>
+                
+                </>
+
+                
     )
 }
