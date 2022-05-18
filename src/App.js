@@ -16,6 +16,7 @@ export default function App(){
                     location={el.location}
                     title={el.title}
                     price={el.price}
+                    openSpots={el.openSpots}
                 />
             </div>
             )

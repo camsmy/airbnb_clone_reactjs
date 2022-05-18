@@ -5,7 +5,8 @@ export default function Card(props){
                 <div className="card">
                     <div className="card--image-container">
                     <img src={`./images/${props.img}`} alt="teachers" className="card--image"/> 
-                        <div className="card--image-tag">SOLD OUT</div>
+                        {props.openSpots === 0 && <div className="card--image-tag">SOLD OUT</div>}
+                        {props.openSpots > 0 && <div className="card--image-tag">{props.location}</div>}
                     </div>
                     <div className="flex card--content">
                     <img src="../images/star1.png" alt="star icon" className="card--star"/>
@@ -15,9 +16,8 @@ export default function Card(props){
                     <p className="card--text">{props.title}</p>
                     </div>
                     <div className="flex card--content">
-                    <p className="card--text"><span className="card--bold">From {props.title}</span> / person</p>
+                    <p className="card--text"><span className="card--bold">From ${props.price}</span> / person</p>
                     </div>
-
                 </div>
                 
                 </>
